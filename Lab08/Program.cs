@@ -186,14 +186,14 @@ namespace Lab08
             var clients = context.clientes;
             var pedidos = context.Pedidos;
 
-            var innetJoinQuery =
+            var innerJoinQuery =
                 clients.Join(pedidos, c =>
                 c.idCliente, p => p.IdCliente,
                 (c, p)
                 => new { CustomerName = c.NombreCompañia, DistributorName = p.PaisDestinatario });
 
 
-            foreach (var item in innetJoinQuery)
+            foreach (var item in innerJoinQuery)
             {
                 Console.WriteLine(item.CustomerName);
             }
