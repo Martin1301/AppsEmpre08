@@ -28,7 +28,7 @@ namespace Lab08
                 select num;
 
             // 3. Query execution.
-            foreach (int num in numbers)
+            foreach (int num in numQuery)
             {
                 Console.Write("{0,1}", num);
             }
